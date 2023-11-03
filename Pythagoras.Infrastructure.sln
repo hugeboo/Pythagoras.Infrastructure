@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pythagoras.Infrastructure", "src\Pythagoras.Infrastructure\Pythagoras.Infrastructure.csproj", "{3BA38759-720C-40D9-854F-E52DEB413733}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pythagoras.Infrastructure.WinForms", "src\Pythagoras.Infrastructure.WinForms\Pythagoras.Infrastructure.WinForms.csproj", "{D8C460C3-CDF6-476A-901E-7458CD224B4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pythagoras.Infrastructure.Tests", "tests\Pythagoras.Infrastructure.Tests\Pythagoras.Infrastructure.Tests.csproj", "{90552A9D-5248-4B0B-B903-4BEED462536C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BA38759-720C-40D9-854F-E52DEB413733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA38759-720C-40D9-854F-E52DEB413733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA38759-720C-40D9-854F-E52DEB413733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA38759-720C-40D9-854F-E52DEB413733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C460C3-CDF6-476A-901E-7458CD224B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C460C3-CDF6-476A-901E-7458CD224B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C460C3-CDF6-476A-901E-7458CD224B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C460C3-CDF6-476A-901E-7458CD224B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90552A9D-5248-4B0B-B903-4BEED462536C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90552A9D-5248-4B0B-B903-4BEED462536C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90552A9D-5248-4B0B-B903-4BEED462536C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90552A9D-5248-4B0B-B903-4BEED462536C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C77EC2F-3C15-4E15-8779-F9E365709BCA}
+	EndGlobalSection
+EndGlobal
