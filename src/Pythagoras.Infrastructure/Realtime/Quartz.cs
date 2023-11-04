@@ -54,7 +54,7 @@ namespace Pythagoras.Infrastructure.Realtime
             {
                 var cancellationToken = (CancellationToken)param!;
 
-                int prevDT = 0;
+                int prevDT = 0, prevT0 = 0;
                 int virtualPeriod = 1000;
                 DateTime prevVirtualTime = DateTime.MinValue;
                 DateTime prevClockTime = DateTime.MinValue;
@@ -74,6 +74,9 @@ namespace Pythagoras.Infrastructure.Realtime
                 while (clockTime.TimeOfDay <= _settings.EndTime && !cancellationToken.IsCancellationRequested)
                 {
                     var t0 = sw.ElapsedMilliseconds;
+                    var realT = t0 - prevT0;
+                    prevT0 = (int)t0;
+
                     var systemTime = DateTime.Now;
                     var virtualTime = systemStartTime.AddMilliseconds(t0);
                     clockTime = clockStartTime.AddMilliseconds((virtualTime.TimeOfDay - systemStartTime.TimeOfDay).TotalMilliseconds * _settings.TimeFactor);
@@ -85,7 +88,7 @@ namespace Pythagoras.Infrastructure.Realtime
                     var newClockTime = clockTime.AddMilliseconds(-prevDT * _settings.TimeFactor);
                     if (newClockTime > clockTime) clockTime = newClockTime;
 
-                    _logger.LogDebug($"SystemTime={systemTime:HH:mm:ss.fff}, VirtualTime={virtualTime:HH:mm:ss.fff}, ClockTime={clockTime:HH:mm:ss.fff}");
+                    _logger.LogDebug($"RealPeriod={realT}, SystemTime={systemTime:HH:mm:ss.fff}, VirtualTime={virtualTime:HH:mm:ss.fff}, ClockTime={clockTime:HH:mm:ss.fff}");
 
                     if ((virtualTime - prevVirtualTime).TotalMilliseconds >= virtualPeriod)
                     {
