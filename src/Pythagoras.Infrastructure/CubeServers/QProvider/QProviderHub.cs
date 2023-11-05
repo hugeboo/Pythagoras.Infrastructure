@@ -7,9 +7,9 @@ namespace Pythagoras.Infrastructure.CubeServers.QProvider
     [SignalRHub]
     public class QProviderHub : Hub<IQProviderHub>
     {
-        public virtual async Task NewTick(Tick tick)
+        public virtual async Task NewTicks(Tick[] ticks)
         {
-            await Clients.Others.NewTick(tick);
+            await Clients.Others.NewTicks(ticks);
         }
     }
 }
